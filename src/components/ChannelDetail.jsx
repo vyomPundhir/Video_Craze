@@ -7,13 +7,16 @@ import { fetchFromAPI } from '../utils/fetchFromAPI';
 
 const ChannelDetail = () => {
   const [channelDetail, setChannelDetail] = useState(null)
-
+  const [ videos, setVideos ] = useState(second)
   const { id } = useParams();
 
   console.log(channelDetail)
 
   useEffect(() => {
-    fetchFromAPI(`channels?part="snippet&id=${id}`)
+    fetchFromAPI(`channels?part=snippet&id=${id}`)
+      .then((data) => setChannelDetail(data?.items[0]));
+
+      fetchFromAPI(`search?channelId=${id}&part=snippet&order=data`)
       .then((data) => setChannelDetail(data?.items[0]));
   }, [id])
   
