@@ -1,4 +1,4 @@
-# Project Name : Clips-Cave ![Tech Stack Used](https://img.shields.io/badge/Technologies-React-blue)
+# Project Name : Video-Craze ![Tech Stack Used](https://img.shields.io/badge/Technologies-React-blue)
 
 ---
 
